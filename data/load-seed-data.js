@@ -28,7 +28,7 @@ async function run() {
       responses.map(response => {
         const { regex, images } = response;
         return client.query(`
-                    INSERT INTO responses (regex, images, owner_id)
+                    INSERT INTO responses (prompt, images, owner_id)
                     VALUES ($1, $2, $3);
                 `,
         [regex, images, user.id]);
