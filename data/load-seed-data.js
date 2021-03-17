@@ -26,12 +26,12 @@ async function run() {
 
     await Promise.all(
       responses.map(response => {
-        const { regex, images } = response;
+        const { prompt, options } = response;
         return client.query(`
-                    INSERT INTO responses (prompt, images, owner_id)
+                    INSERT INTO responses (prompt, options, owner_id)
                     VALUES ($1, $2, $3);
                 `,
-        [regex, images, user.id]);
+        [prompt, options, user.id]);
       })
     );
     

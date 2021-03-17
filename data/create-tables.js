@@ -20,7 +20,7 @@ async function run() {
                 CREATE TABLE responses (
                     id SERIAL PRIMARY KEY NOT NULL,
                     prompt VARCHAR(512) NOT NULL,
-                    images text[] NOT NULL,
+                    options text[] NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);

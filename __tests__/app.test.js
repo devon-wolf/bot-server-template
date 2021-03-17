@@ -38,7 +38,7 @@ describe('app routes', () => {
         {
           id: 1,
           prompt:	'banana',
-          images: [
+          options: [
             'https://cdn.discordapp.com/attachments/808589409074937861/808955633255972894/image0.jpg',
           ],
           owner_id: 1
@@ -58,7 +58,7 @@ describe('app routes', () => {
       const expectation = {
         id: 1,
         prompt:	'banana',
-        images: [
+        options: [
           'https://cdn.discordapp.com/attachments/808589409074937861/808955633255972894/image0.jpg',
         ],
         owner_id: 1
@@ -75,7 +75,7 @@ describe('app routes', () => {
     test('creates a new response as the test user', async() => {
       const newResponse = {
         prompt: 'test',
-        images: ['some URL', 'some other URL']
+        options: ['some URL', 'some other URL']
       };
 
       const expectation = {
@@ -97,7 +97,7 @@ describe('app routes', () => {
     test('edits a response as the test user', async() => {
       const editedResponse = {
         prompt: 'testy',
-        images: ['some URL', 'some other URL', 'a third URL']
+        options: ['some URL', 'some other URL', 'a third URL']
       };
 
       const expectation = {
@@ -121,7 +121,7 @@ describe('app routes', () => {
       const expectation = {
         id: 2,
         prompt: 'testy',
-        images: ['some URL', 'some other URL', 'a third URL'],
+        options: ['some URL', 'some other URL', 'a third URL'],
         owner_id: 2
       };
 
